@@ -1,0 +1,195 @@
+{
+  "info": {
+    "_postman_id": "d2b7e7b1-97c4-4e7b-a159-35ab2402a9d5",
+    "name": "Library API Collection",
+    "description": "Postman collection for user, book, and borrow record operations (Create, Update)."
+  },
+  "item": [
+    {
+      "name": "Create User",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": "Content-Type header for JSON data"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Sumit Kharade\",\n  \"email\": \"sumitkharade7762@gmail.com\",\n  \"password\": \"secret\",\n  \"membershipValidTill\": \"2025-12-31\",\n  \"membershipMonths\": 12\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/users/create",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "users",
+            "create"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update User",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": "Content-Type header for JSON data"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": 2,\n  \"name\": \"Sumit Kharade\",\n  \"email\": \"sumitkharade7762@gmail.com\",\n  \"password\": \"secret\",\n  \"membershipValidTill\": \"2025-12-31\",\n  \"membershipMonths\": 10\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/users/update",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "users",
+            "update"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Book",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": "Content-Type header for JSON data"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Spring Boot Basics\",\n  \"author\": \"John Doe\",\n  \"isbn\": \"1234567890\",\n  \"publishedDate\": \"2025-06-15\",\n  \"availableCopies\": 5\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/books/create",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "books",
+            "create"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Book",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": "Content-Type header for JSON data"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": 1,\n  \"title\": \"Spring Boot Advanced\",\n  \"author\": \"John Doe\",\n  \"isbn\": \"1234567890\",\n  \"publishedDate\": \"2025-06-15\",\n  \"availableCopies\": 10\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/books/update",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "books",
+            "update"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Borrow Record",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": "Content-Type header for JSON data"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"userId\": 1,\n  \"bookId\": 1,\n  \"borrowDate\": \"2025-04-29\",\n  \"returnDate\": \"2025-05-29\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/borrow-records/create",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "borrow-records",
+            "create"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Borrow Record",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": "Content-Type header for JSON data"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": 1,\n  \"userId\": 1,\n  \"bookId\": 1,\n  \"borrowDate\": \"2025-04-29\",\n  \"returnDate\": \"2025-06-01\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/borrow-records/update",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "borrow-records",
+            "update"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
